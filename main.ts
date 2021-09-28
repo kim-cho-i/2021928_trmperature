@@ -11,7 +11,8 @@ basic.forever(function () {
         pins.digitalWritePin(DigitalPin.P2, 1)
         pins.digitalWritePin(DigitalPin.P5, 0)
     } else if (30 <= input.temperature() && 31 > input.temperature()) {
-        music.playTone(262, music.beat(BeatFraction.Whole))
+        // 건풍기모터연결
+        pins.digitalWritePin(DigitalPin.P0, 1)
         pins.digitalWritePin(DigitalPin.P1, 0)
         pins.digitalWritePin(DigitalPin.P2, 0)
         pins.digitalWritePin(DigitalPin.P5, 1)
